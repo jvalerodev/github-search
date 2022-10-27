@@ -6,22 +6,24 @@ import { EyeIcon } from '@heroicons/react/24/outline'
 
 const UserList = () => {
   const users = useSelector(selectUsers);
-  console.log(users);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      {users.map((user) => (
-        <div key={user.id} className="flex mt-10 bg-gray-100 p-5 rounded-md space-x-4">
-          <div className="">
-            <img src={user.avatar_url} alt="Profile" className="h-28 rounded-full" />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pb-10">
+      {users.map(({ id, avatar_url, login }) => (
+        <div key={id} className="flex mt-10 bg-gray-100 p-5 rounded-md space-x-10">
+          <div className="w-1/3">
+            <img src={avatar_url} alt="Profile" className="w-full rounded-full" />
           </div>
-          <div className="relative flex-grow">
-            <p className="text-xl text-blue-600 font-bold pt-5 hover:text-blue-500 transition duration-100 cursor-pointer">{user.login}</p>
-            <div className="absolute bottom-0 right-0">
 
-              <Link to={`/user/${user.login}`} className="flex items-center justify-center bg-blue-600 text-white text-sm py-2 px-5 rounded-md hover:bg-blue-500 transition duration-100">
+          <div className="flex flex-col flex-grow justify-between w-2/3">
+            <Link to={`/user/${login}`} className="text-xl text-blue-600 font-bold pt-5 hover:text-blue-500 transition duration-100 cursor-pointer">
+              {login}
+            </Link>
+            <div className="flex justify-end">
+
+              <Link to={`/user/${login}`} className="flex items-center justify-center bg-blue-600 text-white text-xs py-2 px-4 rounded-md hover:bg-blue-500 transition duration-100">
                 <EyeIcon className="h-5 mr-1" />
-                View Profile
+                View
               </Link>
             </div>
           </div>

@@ -1,21 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectLoading } from '../../features';
-import InputSearch from '../Users/InputSearch';
 import Spinner from '../Shared/Spinner';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   const loading = useSelector(selectLoading);
 
   return (
     <div className="min-h-screen">
-      <div className="container mx-auto">
 
-        <InputSearch />
+      <div className="container w-3/4 md:w-full mx-auto">
+        <Header />
 
         {loading && <Spinner loading={loading} />}
 
-        <main className="mt-20">
+        <main>
           {children}
         </main>
       </div>
