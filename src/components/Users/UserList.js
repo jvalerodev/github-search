@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectUsers } from '../features';
+import { selectUsers } from '../../features';
 import { Link } from 'react-router-dom';
 import { EyeIcon } from '@heroicons/react/24/outline'
 

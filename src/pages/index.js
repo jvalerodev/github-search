@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import InputSearch from '../components/Users/InputSearch';
-import UsersListContainer from '../components/UsersListContainer';
+import UsersListContainer from '../components/Users/UsersListContainer';
 
 const Home = () => {
   return (

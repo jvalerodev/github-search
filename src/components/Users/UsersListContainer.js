@@ -1,7 +1,7 @@
 import React from 'react';
-import UserList from '../components/UserList';
+import UserList from './UserList';
 import { useSelector } from 'react-redux';
-import { selectUsers, selectCount } from '../features';
+import { selectUsers, selectCount } from '../../features';
 
 const UsersListContainer = () => {
   const users = useSelector(selectUsers);
