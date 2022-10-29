@@ -5,9 +5,9 @@ const UserProfile = ({ user, organizations }) => {
   const { avatar_url, name, login, bio, followers, following, company, location } = user;
 
   return (
-    <div className="flex flex-col lg:w-1/4 justify-center md:justify-start mr-5">
-      <div className="w-3/4">
-        <img src={avatar_url} alt="Avatar" className="w-full rounded-full" />
+    <div className="flex flex-col xl:w-1/4 items-center xl:items-start">
+      <div className="xl:w-3/4 flex justify-center">
+        <img src={avatar_url} alt="Avatar" className="w-1/2 xl:w-full rounded-full" />
       </div>
 
       <p className="mt-3 text-3xl text-gray-900 font-bold">{name}</p>

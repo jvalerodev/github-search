@@ -15,12 +15,12 @@ const UsersListContainer = () => {
     <>
 
       {users.length === 0 ? (
-        <p className="mt-10 text-center">Type the user you want to search for.</p>
+        <p className="mt-10 text-center text-gray-800">Type the user you want to search for.</p>
       ) : (
-        <>
+        <div className="px-10">
           <h1 className="mt-14 text-lg text-gray-600">Results:</h1>
           <UserList />
-        </>
+        </div>
       )}
     </>
   );

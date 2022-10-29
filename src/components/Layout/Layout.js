@@ -9,8 +9,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen">
-
-      <div className="container w-3/4 md:w-full mx-auto">
+      <div className="container mx-auto">
         <Header />
 
         {loading && <Spinner loading={loading} />}

@@ -23,12 +23,10 @@ const User = () => {
 
   return (
     <Layout>
-      <div className="mt-20">
-        <div className="flex flex-col lg:flex-row p-10 rounded-md justify-between">
-          {user && <UserProfile user={user} organizations={organizations} />}
+      <div className="flex flex-col xl:flex-row p-10 rounded-md justify-between mt-10">
+        {user && <UserProfile user={user} organizations={organizations} />}
 
-          {repositories && <UserRepositories repos={repositories} />}
-        </div>
+        {repositories && <UserRepositories repos={repositories} />}
       </div>
     </Layout>
   );
